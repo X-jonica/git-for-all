@@ -11,10 +11,9 @@ Voici quelques commandes essentielles pour configurer et manipuler un dépôt Gi
 ```bash
 git config --global user.name "Votre Nom"
 git config --global user.email "votre.email@example.com"
-
-# --global : applique cette configuration pour tous les dépôts Git sur votre machine.
-# On peut redéfinir ces valeurs par projet avec --local.
 ```
+> --global : applique cette configuration pour tous les dépôts Git sur votre machine.
+> On peut redéfinir ces valeurs par projet avec --local.
 
 ---
 
@@ -22,9 +21,9 @@ git config --global user.email "votre.email@example.com"
 
 ```bash
 nano .gitconfig
-# Cette commande ouvre le fichier de configuration Git global dans l’éditeur nano.
-# Tu peux y voir et modifier des paramètres comme "user.name" et "user.email".
 ```
+> Cette commande ouvre le fichier de configuration Git global dans l’éditeur nano.
+> Tu peux y voir et modifier des paramètres comme "user.name" et "user.email".
 
 ---
 
@@ -32,9 +31,19 @@ nano .gitconfig
 
 ```bash
 git config --system
-# Modifie la configuration à l’échelle du système (tous les utilisateurs de la machine).
-# Nécessite souvent des droits administrateur (sudo).
 ```
+> Modifie la configuration à l’échelle du système (tous les utilisateurs de la machine).
+> Nécessite souvent des droits administrateur (sudo).
+
+---
+
+## Commande pour initialiser un projet git
+```bash
+git init
+```
+> Cette commande crée un dépôt Git local dans le dossier courant.
+> Elle génère un dossier caché .git qui contient toute la configuration et l’historique de ton projet.
+
 
 ---
 
@@ -44,9 +53,9 @@ git config --system
 
 ```bash
 git config --local
-# Modifie uniquement la configuration de ce dépôt spécifique.
-# Exemple : définir un user.name/email différent pour ce projet.
 ```
+> Modifie uniquement la configuration de ce dépôt spécifique.
+> Exemple : définir un user.name/email différent pour ce projet.
 
 ---
 
@@ -54,9 +63,9 @@ git config --local
 
 ```bash
 git add <fichier>
-# ➜ Ajoute le fichier dans la "zone de préparation" (staging area)
-#    Cela signifie que Git se prépare à inclure ce fichier
 ```
+> ➜ Ajoute le fichier dans la "zone de préparation" (staging area)
+>    Cela signifie que Git se prépare à inclure ce fichier
 
 ---
 
@@ -64,9 +73,9 @@ git add <fichier>
 
 ```bash
 git rm --cached <fichier>
-# Supprime un fichier de l’index Git (zone de staging) mais le laisse présent dans ton dossier.
-# Pratique si tu as ajouté un fichier par erreur avec "git add".
 ```
+> Supprime un fichier de l’index Git (zone de staging) mais le laisse présent dans ton dossier.
+> Pratique si tu as ajouté un fichier par erreur avec "git add".
 
 ---
 
@@ -74,9 +83,9 @@ git rm --cached <fichier>
 
 ```bash
 git ls-files --others --exclude-standard
-# Liste tous les fichiers qui ne sont pas suivis par Git (non ajoutés à l’index).
-# L’option --exclude-standard permet d’ignorer les fichiers listés dans .gitignore.
 ```
+> Liste tous les fichiers qui ne sont pas suivis par Git (non ajoutés à l’index).
+> L’option --exclude-standard permet d’ignorer les fichiers listés dans .gitignore.
 
 ---
 
