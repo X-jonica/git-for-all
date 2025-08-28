@@ -1,6 +1,20 @@
-# Formation Git – Commandes utiles
+# **Formation Git – Commandes utiles**
 
 Voici quelques commandes essentielles pour configurer et manipuler un dépôt Git, avec des explications claires.
+
+# MANIPULATION LOCAL
+
+---
+
+## Première configuration de Git (nom et email)
+
+```bash
+git config --global user.name "Votre Nom"
+git config --global user.email "votre.email@example.com"
+
+# --global : applique cette configuration pour tous les dépôts Git sur votre machine.
+# On peut redéfinir ces valeurs par projet avec --local.
+```
 
 ---
 
