@@ -38,16 +38,6 @@ git config --system
 > Modifie la configuration à l’échelle du système (tous les utilisateurs de la machine).
 > Nécessite souvent des droits administrateur (sudo).
 
----
-
-## Commande pour initialiser un projet git
-
-```bash
-git init
-```
-
-> Cette commande crée un dépôt Git local dans le dossier courant.
-> Elle génère un dossier caché .git qui contient toute la configuration et l’historique de ton projet.
 
 ---
 
@@ -61,6 +51,18 @@ git config --local
 
 > Modifie uniquement la configuration de ce dépôt spécifique.
 > Exemple : définir un user.name/email différent pour ce projet.
+
+---
+
+## Commande pour initialiser un projet git
+
+```bash
+git init
+```
+
+> Cette commande crée un dépôt Git local dans le dossier courant.
+> Elle génère un dossier caché .git qui contient toute la configuration et l’historique de ton projet.
+
 
 ---
 
