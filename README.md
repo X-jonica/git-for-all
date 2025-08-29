@@ -180,9 +180,52 @@ git status
 > En français si possible (ou ...)
 
 ```bash
+git add <fichier>
 git commit
 
-# puis on arrive sur l'editeur integré
+# puis on arrive sur l’éditeur de commit Git intégré
 
+Sujet de la commit (limiter a 50 caracteres)
 
+On laisse une ligne blanche, puis on passe au corps du text:
+- Ici on repond a la question pourquoi ? plutot que quoi ?
+- En francais ou anglais ca depends de votre equipe
+# Ajout du fichier script.js, exemple.html, page.peVeuillez saisir le message de validation pour vos modifications. Les lignes
+# commençant par '#' seront ignorées, et un message vide abandonne la validation.
+#
+# Sur la branche main
+# Votre branche est à jour avec 'origin/main'.
+#
+# Modifications qui seront validées :
+#       modifié :         README.md
+#       nouveau fichier : notes.txt
+#
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+-- INSERTION --
 ```
+
+---
+
+## Commande pour résumer l’historique Git par auteur et par message de commit.
+
+```bash
+git shortlog
+```
+
+> Ça nous montre la liste des contributeurs et leurs commits.
+
+```bash
+git shortlog -s
+# (-s = summary, sans afficher les messages)
+```
+
+> Compter uniquement le nombre de commits par auteur
