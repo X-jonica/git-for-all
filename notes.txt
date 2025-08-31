@@ -7,3 +7,4 @@ Il est important de respecter certaines regles pour les messages de commit :
 -> Limiter la taille du sujet à 50 caractères
 -> Répondre a la question pourquoi ? plutot que quoi ?
 -> En français si possible (ou ...)
+
