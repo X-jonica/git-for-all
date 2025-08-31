@@ -241,3 +241,20 @@ git shortlog -s
 ```
 
 > Compter uniquement le nombre de commits par auteur
+
+---
+
+## Commande Git pour renommer un fichier déjà suivi
+
+Git permet de renommer directement un fichier qui est déjà suivi (c’est-à-dire ajouté au suivi de version).
+
+```bash
+git mv <ancien-nom-du-fichier> <nouveau-nom-du-fichier>
+
+# Exemple :
+git mv notes.txt noteGit.txt
+```
+
+> Avec git mv, Git détecte automatiquement que c’est un renommage et ajoute la modification à l’index (staging area) sans qu'on aies besoin de faire un git add.
+
+> Donc, pas besoin de supprimer puis recréer le fichier manuellement, git mv s’occupe de tout (renommer + indexer).
