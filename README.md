@@ -4,8 +4,6 @@ Voici quelques commandes essentielles pour configurer et manipuler un dépôt Gi
 
 # MANIPULATION LOCAL
 
----
-
 ## Première configuration de Git (nom et email)
 
 ```bash
@@ -17,8 +15,6 @@ git config --global user.email "votre.email@example.com"
 
 > On peut redéfinir ces valeurs par projet avec --local.
 
----
-
 ## Modifier la configuration Git avec nano
 
 ```bash
@@ -29,7 +25,6 @@ nano .gitconfig
 
 > Tu peux y voir et modifier des paramètres comme "user.name" et "user.email".
 
----
 
 ## Commande pour modifier les paramètres système de Git
 
@@ -41,11 +36,10 @@ git config --system
 
 > Nécessite souvent des droits administrateur (sudo).
 
----
 
 ## Commande pour configurer un dépôt Git (local)
 
-> ⚠️ Il faut se placer dans le dossier où Git a été initialisé (`git init` ou cloné).
+**Il faut se placer dans le dossier où Git a été initialisé (`git init` ou cloné).**
 
 ```bash
 git config --local
@@ -55,7 +49,6 @@ git config --local
 
 > Exemple : définir un user.name/email différent pour ce projet.
 
----
 
 ## Commande pour initialiser un projet git
 
@@ -67,7 +60,6 @@ git init
 
 > Elle génère un dossier caché .git qui contient toute la configuration et l’historique de ton projet.
 
----
 
 ## Commande pour ajouter un fichier dans l’index de Git
 
@@ -79,7 +71,6 @@ git add <fichier>
 
 > Cela signifie que Git se prépare à inclure ce fichier
 
----
 
 ## Commande pour désindexer un fichier du dépôt Git
 
@@ -91,7 +82,6 @@ git rm --cached <fichier>
 
 > Pratique si tu as ajouté un fichier par erreur avec "git add".
 
----
 
 ## Commande pour afficher les fichiers non suivis par Git
 
@@ -103,13 +93,12 @@ git ls-files --others --exclude-standard
 
 > L’option --exclude-standard permet d’ignorer les fichiers listés dans .gitignore.
 
----
 
 ## Commande pour commit (Créer son premier commit)
 
-> Un commit est un ensemble de modification, qui corresponde très souvent a une fonctionnalité, un commit doit etre coherent (c-à-d on ne doit pas commit au commencement d'un projet)
+**Un commit est un ensemble de modification, qui corresponde très souvent a une fonctionnalité, un commit doit etre coherent (c-à-d on ne doit pas commit au commencement d'un projet)**
 
-> Il est important également de noter qu'un message de commit est obigatoire;
+**Il est important également de noter qu'un message de commit est obigatoire;**
 
 ```bash
 git commit -m "message de commit"
@@ -126,7 +115,6 @@ git log -1
 # Pour afficher "le" dernier commit
 ```
 
----
 
 ## Commande pour valider les modifications (commit)
 
@@ -142,7 +130,6 @@ git commit -a
 # :wq   : write & quit → enregistrer et quitter l’éditeur
 ```
 
----
 
 ## Commande pour modifier le dernier commit
 
@@ -175,21 +162,20 @@ git status
 #    - Changements non suivis (untracked files)
 ```
 
----
 
 ## Bonnes pratiques des messages de commit
 
 ### Il est important de respecter certaines regles pour les messages de commit :
 
-> Prendre le temps de rediger un message
+**Prendre le temps de rediger un message**
 
-> Ajouter un sujet
+**Ajouter un sujet**
 
-> Limiter la taille du sujet à 50 caractères
+**Limiter la taille du sujet à 50 caractères**
 
-> Répondre a la question pourquoi ? plutot que quoi ?
+**Répondre a la question pourquoi ? plutot que quoi ?**
 
-> En français si possible (ou ...)
+**En français si possible (ou ...)**
 
 ```bash
 git add <fichier>
@@ -225,8 +211,6 @@ On laisse une ligne blanche, puis on passe au corps du text:
 -- INSERTION --
 ```
 
----
-
 ## Commande pour résumer l’historique Git par auteur et par message de commit.
 
 ```bash
@@ -242,7 +226,6 @@ git shortlog -s
 
 > Compter uniquement le nombre de commits par auteur
 
----
 
 ## Commande Git pour renommer un fichier déjà suivi
 
@@ -258,3 +241,20 @@ git mv notes.txt noteGit.txt
 > Avec git mv, Git détecte automatiquement que c’est un renommage et ajoute la modification à l’index (staging area) sans qu'on aies besoin de faire un git add.
 
 > Donc, pas besoin de supprimer puis recréer le fichier manuellement, git mv s’occupe de tout (renommer + indexer).
+
+
+## Commande Git pour supprimer un fichier déjà suivi
+
+supprime le fichier du répertoire de travail (il disparaît physiquement).
+
+programme sa suppression dans l’index (le fichier sera supprimé du dépôt à la prochaine validation avec git commit).
+
+```bash
+git rm <fichier>
+
+#c'est equiaut a faire
+
+rm <fichier>       # Supprime le fichier physiquement
+git add <fichier>  # Signale à Git que ce fichier a été supprimé
+```
+> Donc git rm est la méthode simple et directe pour retirer un fichier suivi par Git.
